@@ -12,6 +12,13 @@ from pprint import pprint
 
 
 def get_random_appointment(_appointment_schedule):
+    """
+    Custom method to get random appointment from _appointment_schedule
+    :param _appointment_schedule: The AppointmentSchedule object
+    :type _appointment_schedule: AppointmentSchedule
+    :return: Random appointment ID
+    :rtype: str
+    """
     random_x = random.randint(0, len(_appointment_schedule.appointments) - 1)
     random_id = _appointment_schedule.appointments[random_x].id
     return random_id
@@ -89,12 +96,13 @@ if __name__ == '__main__':
         dosage=1.5
     )
 
-    print("Manually created prescription:")
+    print("Doctor issuing prescriptions:")
     pprint(prescription_1.__dict__)
     print("\n")
 
     # Test 5
     # Request repeated prescription
+    print("Request repeat prescription: ")
     repeated_prescription = patient_1.request_repeat(prescription_1)
     if repeated_prescription is not None:
         pprint({
@@ -105,6 +113,7 @@ if __name__ == '__main__':
 
     # Test 6
     # Request repeated prescription of other patient
+    print("Request repeated prescription of other patient:")
     repeated_prescription = patient_2.request_repeat(prescription_1)
     if repeated_prescription is not None:
         pprint({
@@ -134,7 +143,6 @@ if __name__ == '__main__':
     print("Before and after consultation: {0} & {1}".format(
         before, after
     ))
-
 
     # Final list of all appointments
     appointment_schedule.print_appointment_list()
