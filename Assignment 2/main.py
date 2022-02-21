@@ -1,13 +1,13 @@
 import random
 
-from lib.AppointmentSchedule import AppointmentSchedule
-from lib.Appointment import Appointment
-from lib.Doctor import Doctor
-from lib.HealthcareProfessional import HealthcareProfessional
-from lib.Nurse import Nurse
-from lib.Patient import Patient
-from lib.Prescription import Prescription
-from lib.Receptionist import Receptionist
+from main_lib.AppointmentSchedule import AppointmentSchedule
+from main_lib.Appointment import Appointment
+from main_lib.Doctor import Doctor
+from main_lib.HealthcareProfessional import HealthcareProfessional
+from main_lib.Nurse import Nurse
+from main_lib.Patient import Patient
+from main_lib.Prescription import Prescription
+from main_lib.Receptionist import Receptionist
 from pprint import pprint
 
 
